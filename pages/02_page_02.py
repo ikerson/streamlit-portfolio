@@ -36,7 +36,7 @@ PROJECTS = [
 # st.set_page_config(page_title=None, page_icon=None, layout="centered", initial_sidebar_state="auto", menu_items=None)
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout=PAGE_LAYOUT)
 
-# social links
+# --- SOCIAL MEDIA LINKS ---
 st.write('\n')
 cols = st.columns(len(SOCIAL_MEDIA))
 for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
