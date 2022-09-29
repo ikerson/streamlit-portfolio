@@ -72,13 +72,10 @@ for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
 # --- SKILLS ---
 st.write('\n')
 st.subheader("Skills")
-st.write(
-"""
-Advanced:, Python, SQL, Pandas, Sci-Kit Learn, Keras, Data Processing, Microsoft Office, Google Workspace, Jupyter Notebooks.
-Proficient: Matplotlib, Seaborn, Plotly, Pyspark, MongoDB, PostgreSQL, Git, GitHub, Bash command line, VSCode, Azure.
-Expert: Education, Written & Verbal Communication, Public Speaking, Data Analysis, Data Science.
-"""
-)
+st.write("**Advanced**: Python, SQL, Pandas, Sci-Kit Learn, Keras, Data Processing, Microsoft Office, Google Workspace, Jupyter Notebooks.")
+st.write("**Proficient**: Matplotlib, Seaborn, Plotly, Pyspark, MongoDB, PostgreSQL, Git, GitHub, Bash command line, VSCode, Azure.")
+st.write("**Expert**: Team Management, Education, Written & Verbal Communication, Public Speaking, Data Analysis, Data Science.")
+
 
 # --- Projects ---
 st.write('\n')
