@@ -91,8 +91,8 @@ st.subheader("Work History")
 st.write("---")
 
 # --- JOB 1
-st.write("**Lead Data Analytics Engineer | Stibo Systems | Højbjerg, Denmark**")
-st.write("August 2020 - Present")
+st.write("**Lead Data Analytics Engineer** | Stibo Systems | Højbjerg, Denmark")
+st.write("__August 2020 - Present__")
 st.write(
 """
 Lead a team of three in researching and creating a synthetic data generation system and distributed 
