@@ -11,8 +11,8 @@ profile_pic = current_dir / "assets" / "profile-pic.jpg"
 
 # page settings
 PAGE_TITLE = "Digital CV | Isaac Kerson"
-PAGE_ICON = ":wave:"
-PAGE_LAYOUT = "wide"
+PAGE_ICON = ":page_facing_up:"
+PAGE_LAYOUT = "centered"
 NAME = "Isaac Kerson"
 DESCRIPTION = """
 Data Analyst candidate skilled in advanced data analytics, ETL pipelines, 
