@@ -12,6 +12,7 @@ profile_pic = current_dir / "assets" / "profile-pic.png"
 # page settings
 PAGE_TITLE = "Digital CV | Isaac Kerson"
 PAGE_ICON = ":wave:"
+PAGE_LAYOUT = "wide"
 NAME = "Isaac Kerson"
 DESCRIPTION = """
 Data Analyst candidate skilled in advanced data analytics, ETL pipelines, 
@@ -32,7 +33,9 @@ PROJECTS = {
     "Auto Shop Database - Content Management System using PostgreSQL database and Flask": "https://github.com/ikerson",
 }
 
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
+# st.set_page_config(page_title=None, page_icon=None, layout="centered", initial_sidebar_state="auto", menu_items=None)
+st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout=PAGE_LAYOUT)
+
 
 # load css, pdf, and profile picture
 with open(css_file) as f:
