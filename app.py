@@ -91,7 +91,8 @@ st.subheader("Work History")
 st.write("---")
 
 # --- JOB 1
-st.markdown("**Lead Data Analytics Engineer**, Stibo Systems, Højbjerg, Denmark")
+st.markdown(**Lead Data Analytics Engineer**, 
+Stibo Systems, Højbjerg, Denmark")
 st.markdown("August 2021 - Present")
 st.write(
 """
@@ -102,6 +103,7 @@ Presented findings to company management using Seaborn, Matplotlib, and PowerPoi
 Handed off research to the internal data science team and saw our methodology incorporated into the company's master data management product.  
 """
 )
+st.write("---")
 
 # --- JOB 2
 st.markdown("**Learning Analytics Team Lead & Assistant Professor**")
@@ -120,6 +122,7 @@ their learning and allowed teachers to adjust their lessons and instructional ap
 Trained colleagues as well as led product maintenance improvement over a ten-year period.
 """
 )
+st.write("---")
 
 # --- JOB 3
 st.markdown("**Grade Team Lead & English Language Arts Teacher**")
@@ -133,5 +136,5 @@ Led seventh grade team in reviewing student academic, behavioral, and attendance
 Received formal Letter of Accommodation from Principal for accomplishments as team
 """
 )
-
+st.write("---")
 
