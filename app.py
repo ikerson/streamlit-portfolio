@@ -10,7 +10,7 @@ resume_file = current_dir / "assets" / "cv.pdf"
 profile_pic = current_dir / "assets" / "profile-pic.jpg"
 
 # page settings
-PAGE_TITLE = "Digital CV | Isaac Kerson"
+PAGE_TITLE = "Isaac Kerson | Resume"
 PAGE_ICON = ":page_facing_up:"
 PAGE_LAYOUT = "centered"
 NAME = "Isaac Kerson"
