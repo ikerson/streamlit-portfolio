@@ -17,35 +17,41 @@ url = st.text_input("Enter the URL of the dataset.")
 
 if url:
     if url.endswith(".csv"):
-        st.write("Downloading dataset...")
+        st.success("Downloading dataset...")
         response = requests.get(url)
         if response.status_code == 200:
-            st.write("Starting connection...")
+            st.success("Starting connection...")
             size = requests.get(url, stream=True).headers['Content-length']
             if size and int(size) < 2e+8:
-                st.write("Reading file...")
+                st.success("Reading file...")
                 try:
                     df = pd.read_csv(url)
-                    st.write("File read successfully.")
+                    st.success("File read successfully.")
                 except IOError as e:
-                    st.write("Error:", e)
+                    st.error("Error:", e)
             else:
                 st.write("Dataset is {size} bytes. This is too large process.")
+        else: 
+            st.warning("Error:", response.status_code)
     else: 
-        st.write("URLs must end in .csv")
+        st.warning("URLs must end in .csv")
 
 data = st.file_uploader("Upload a CSV file.")
 
 if data:
-    st.write("File uploaded successfully.")
+    st.success("File uploaded successfully.")
     try:
         df = pd.read_csv(data)
-        st.write("File read successfully.")
+        st.success("File read successfully.")
     except IOError as e:
-        st.write("Error:", e)
+        st.exception("Error:", e)
 
 if isinstance(df, pd.DataFrame) and df.shape[0] > 0:
     st.write(f"Dataset has {df.shape[0]} rows and {df.shape[1]} columns.")
     st.dataframe(df)
+    if df.shape[0] > 10000:
+        st.warning("Due to limited resources, synthetic data will only be generated for the first 10,000 rows.")
+    st.markdown("## Generate Synthetic Data")
+    st.selectbox("Select a model to generate synthetic data.", ["CTGAN", "TVAE", "GaussianCopula"])
 else:
-    st.write("Pandas could not read the csv file.")
+    st.warning("Pandas could not read the csv file.")
