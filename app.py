@@ -36,6 +36,11 @@ PROJECTS = [
 # st.set_page_config(page_title=None, page_icon=None, layout="centered", initial_sidebar_state="auto", menu_items=None)
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout=PAGE_LAYOUT)
 
+# social links
+st.write('\n')
+cols = st.columns(len(SOCIAL_MEDIA))
+for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
+    cols[index].write(f"[{platform}]({link})")
 
 # load css, pdf, and profile picture
 with open(css_file) as f:
@@ -60,13 +65,6 @@ with col1:
 
 with col2:
     st.image(profile_pic, width=230)
-
-
-# social links
-st.write('\n')
-cols = st.columns(len(SOCIAL_MEDIA))
-for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-    cols[index].write(f"[{platform}]({link})")
 
 
 # --- SKILLS ---
