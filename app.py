@@ -27,11 +27,11 @@ SOCIAL_MEDIA = {
     "GitHub": "https://github.com/ikerson",
     "Twitter": "https://twitter.com/Isaac_Kerson",
 }
-PROJECTS = {
-    "Consumer Electronics Classification -  Distributed random forest classification model for consumer electronics master data": "https://github.com/ikerson",
-    "IT Ticketing Time Prediction - Deep learning model to predict service ticket completion time using system logs": "https://github.com/ikerson",
-    "Auto Shop Database - Content Management System using PostgreSQL database and Flask": "https://github.com/ikerson",
-}
+PROJECTS = [
+    ("Consumer Electronics Classification", "https://github.com/ikerson", "Distributed random forest classification model for consumer electronics master data"),
+    ("IT Ticketing Time Prediction", "https://github.com/ikerson", "Deep learning model to predict service ticket completion time using system logs"),
+    ("Auto Shop Database", "https://github.com/ikerson", "Content Management System using PostgreSQL database and Flask"),
+]
 
 # st.set_page_config(page_title=None, page_icon=None, layout="centered", initial_sidebar_state="auto", menu_items=None)
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout=PAGE_LAYOUT)
@@ -84,8 +84,8 @@ Expert: Education, Written & Verbal Communication, Public Speaking, Data Analysi
 st.write('\n')
 st.subheader("Projects")
 st.write("---")
-for project, link in PROJECTS.items():
-    st.write(f"[{project}]({link})")
+for project in PROJECTS:
+    st.write(f"[{project[0]}]({project[1]}) - {project[2]}")
 
 
 # --- WORK HISTORY ---
