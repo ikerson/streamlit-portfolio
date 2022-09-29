@@ -92,7 +92,7 @@ st.write("---")
 
 # --- JOB 1
 st.markdown("**Lead Data Analytics Engineer**, Stibo Systems, Højbjerg, Denmark")
-st.markdown("August 2021 - Present")
+st.markdown("Present - August 2021")
 st.write(
 """
 Lead a team of three in researching and creating a synthetic data generation system and distributed 
@@ -105,10 +105,8 @@ Handed off research to the internal data science team and saw our methodology in
 st.write("---")
 
 # --- JOB 2
-st.markdown("**Learning Analytics Team Lead & Assistant Professor**")
-st.markdown("Gachon University")
-st.markdown("Seoul, South Korea")
-st.markdown("January 2011 – September 2021")
+st.markdown("**Learning Analytics Team Lead & Assistant Professor**, Gachon University, Seoul, South Korea")
+st.markdown("September 2021 - January 2011")
 st.write(
 """
 Implemented, organized and led multiple Learning Analytics projects for the university's Global Language Center. 
@@ -124,10 +122,8 @@ Trained colleagues as well as led product maintenance improvement over a ten-yea
 st.write("---")
 
 # --- JOB 3
-st.markdown("**Grade Team Lead & English Language Arts Teacher**")
-st.markdown("University Neighborhood Middle School")
-st.markdown("New York, New York, USA")
-st.markdown("July 2007 – July 2009")
+st.markdown("**Grade Team Lead & English Language Arts Teacher**, University Neighborhood Middle School, New York, New York, USA")
+st.markdown("July 2009 - July 2007")
 st.write(
 """
 Worked on a teacher-lead team to design and implement a real-time student attendance system using Google Sheets. 
@@ -137,3 +133,17 @@ Received formal Letter of Accommodation from Principal for accomplishments as te
 )
 st.write("---")
 
+# --- Education & Certificates ---
+st.write('\n')
+st.subheader("Education & Certificates")
+st.write(
+"""
+GEORGIA INSTITUTE OF TECHNOLOGY, *Master of Science in Analytics*, December 2022
+NEW YORK UNIVERSITY, *Master of Education*, May 2007
+GEORGE MASON UNIVERSITY, *Bachelor of Arts in English Language*, January 2001
+IBM, *DevOps and Software Engineering Certification*, Current
+MONGODB, *MongoDB for Python Developers Certification*, January 2022
+DATACAMP, *Python Data Science Certification*, July 2021
+GOOGLE, *IT Automation with Python Certification*, July 2020
+"""
+)
