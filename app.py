@@ -14,20 +14,23 @@ PAGE_TITLE = "Digital CV | Isaac Kerson"
 PAGE_ICON = ":wave:"
 NAME = "Isaac Kerson"
 DESCRIPTION = """
-Data Analyst who dreams of building tools to help improve educational outcomes.
+Data Analyst candidate skilled in advanced data analytics, ETL pipelines, 
+and building machine learning models for decision making systems. 
+Proficient in Python, SQL, Scikit-learn, and Keras. 
+Experience researching and developing ML prototypes at an industry-leading master data company,
+implementing analytics engineering projects at a large university, and leading teams. 
 """
-EMAIL = "ikerson@gmail.com"
+EMAIL = "ikerson3@gatech.edu"
 SOCIAL_MEDIA = {
     "LinkedIn": "https://www.linkedin.com/in/isaackerson",
-    "GitHub": "https://github.com/ikerson/synthetic-data-spaces",
+    "GitHub": "https://github.com/ikerson",
     "Twitter": "https://twitter.com/Isaac_Kerson",
 }
-# PROJECTS = {
-#     "🏆 Sales Dashboard - Comparing sales across three stores": "https://youtu.be/Sb0A9i6d320",
-#     "🏆 Income and Expense Tracker - Web app with NoSQL database": "https://youtu.be/3egaMfE9388",
-#     "🏆 Desktop Application - Excel2CSV converter with user settings & menubar": "https://youtu.be/LzCfNanQ_9c",
-#     "🏆 MyToolBelt - Custom MS Excel add-in to combine Python & Excel": "https://pythonandvba.com/mytoolbelt/",
-# }
+PROJECTS = {
+    "Consumer Electronics Classification -  Distributed random forest classification model for consumer electronics master data": "https://github.com/ikerson",
+    "IT Ticketing Time Prediction - Deep learning model to predict service ticket completion time using system logs": "https://github.com/ikerson",
+    "Auto Shop Database - Content Management System using PostgreSQL database and Flask": "https://github.com/ikerson",
+}
 
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
@@ -63,30 +66,23 @@ for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
     cols[index].write(f"[{platform}]({link})")
 
 
-# --- EXPERIENCE & QUALIFICATIONS ---
-st.write('\n')
-st.subheader("Experience & Qulifications")
-st.write(
-    """
-- ✔️ 7 Years expereince extracting actionable insights from data
-- ✔️ Strong hands on experience and knowledge in Python and Excel
-- ✔️ Good understanding of statistical principles and their respective applications
-- ✔️ Excellent team-player and displaying strong sense of initiative on tasks
-"""
-)
-
-
 # --- SKILLS ---
 st.write('\n')
-st.subheader("Hard Skills")
+st.subheader("Skills")
 st.write(
-    """
-- 👩‍💻 Programming: Python (Scikit-learn, Pandas), SQL, VBA
-- 📊 Data Visulization: PowerBi, MS Excel, Plotly
-- 📚 Modeling: Logistic regression, linear regression, decition trees
-- 🗄️ Databases: Postgres, MongoDB, MySQL
+"""
+Advanced:, Python, SQL, Pandas, Sci-Kit Learn, Keras, Data Processing, Microsoft Office, Google Workspace, Jupyter Notebooks.
+Proficient: Matplotlib, Seaborn, Plotly, Pyspark, MongoDB, PostgreSQL, Git, GitHub, Bash command line, VSCode, Azure.
+Expert: Education, Written & Verbal Communication, Public Speaking, Data Analysis, Data Science.
 """
 )
+
+# --- Projects ---
+st.write('\n')
+st.subheader("Projects")
+st.write("---")
+for project, link in PROJECTS.items():
+    st.write(f"[{project}]({link})")
 
 
 # --- WORK HISTORY ---
@@ -95,19 +91,21 @@ st.subheader("Work History")
 st.write("---")
 
 # --- JOB 1
-st.write("🚧", "**Senior Data Analyst | Ross Industries**")
-st.write("02/2020 - Present")
+st.write("**Lead Data Analytics Engineer | Stibo Systems | Højbjerg, Denmark**")
+st.write("August 2020 - Present")
 st.write(
-    """
-- ► Used PowerBI and SQL to redeﬁne and track KPIs surrounding marketing initiatives, and supplied recommendations to boost landing page conversion rate by 38%
-- ► Led a team of 4 analysts to brainstorm potential marketing and sales improvements, and implemented A/B tests to generate 15% more client leads
-- ► Redesigned data model through iterations that improved predictions by 12%
+"""
+Lead a team of three in researching and creating a synthetic data generation system and distributed 
+random forest classification model for consumer electronics master data. 
+Acceved 97% accuracy on validation data set. 
+Presented findings to company management using Seaborn, Matplotlib, and PowerPoint. 
+Handed off research to the internal data science team and saw our methodology incorporated into the company's master data management product.  
 """
 )
 
 # --- JOB 2
 st.write('\n')
-st.write("🚧", "**Data Analyst | Liberty Mutual Insurance**")
+st.write("**Learning Analytics Team Lead & Assistant Professor | Gachon University | Seoul, South Korea**")
 st.write("01/2018 - 02/2022")
 st.write(
     """
@@ -130,9 +128,3 @@ st.write(
 )
 
 
-# --- Projects & Accomplishments ---
-# st.write('\n')
-# st.subheader("Projects & Accomplishments")
-# st.write("---")
-# for project, link in PROJECTS.items():
-#     st.write(f"[{project}]({link})")
