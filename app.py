@@ -91,8 +91,7 @@ st.subheader("Work History")
 st.write("---")
 
 # --- JOB 1
-st.markdown(**Lead Data Analytics Engineer**, 
-Stibo Systems, Højbjerg, Denmark")
+st.markdown("**Lead Data Analytics Engineer**, Stibo Systems, Højbjerg, Denmark")
 st.markdown("August 2021 - Present")
 st.write(
 """
