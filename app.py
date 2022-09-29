@@ -91,17 +91,15 @@ st.subheader("Work History")
 st.write("---")
 
 # --- JOB 1
-st.markdown("### Lead Data Analytics Engineer")
-st.markdown("#### Stibo Systems")
-st.markdown("#### Højbjerg, Denmark")
-st.markdown("#### August 2021 - Present")
+st.markdown("**Lead Data Analytics Engineer**, Stibo Systems, Højbjerg, Denmark")
+st.markdown("August 2021 - Present")
 st.write(
 """
-_Lead a team of three in researching and creating a synthetic data generation system and distributed 
+Lead a team of three in researching and creating a synthetic data generation system and distributed 
 random forest classification model for consumer electronics master data. 
 Acceved 97% accuracy on validation data set. 
 Presented findings to company management using Seaborn, Matplotlib, and PowerPoint. 
-Handed off research to the internal data science team and saw our methodology incorporated into the company's master data management product._  
+Handed off research to the internal data science team and saw our methodology incorporated into the company's master data management product.  
 """
 )
 
