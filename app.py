@@ -92,9 +92,9 @@ st.write("---")
 
 # --- JOB 1
 st.markdown("**Lead Data Analytics Engineer**")
-st.markdown("*Stibo Systems*")
+st.markdown("Stibo Systems")
 st.markdown("Højbjerg, Denmark")
-st.markdown("August 2020 - Present")
+st.markdown("August 2021 - Present")
 st.write(
 """
 Lead a team of three in researching and creating a synthetic data generation system and distributed 
@@ -106,26 +106,33 @@ Handed off research to the internal data science team and saw our methodology in
 )
 
 # --- JOB 2
-st.write('\n')
-st.write("**Learning Analytics Team Lead & Assistant Professor | Gachon University | Seoul, South Korea**")
-st.write("01/2018 - 02/2022")
+st.markdown("**Learning Analytics Team Lead & Assistant Professor**")
+st.markdown("Gachon University")
+st.markdown("Seoul, South Korea")
+st.markdown("January 2011 – September 2021")
 st.write(
-    """
-- ► Built data models and maps to generate meaningful insights from customer data, boosting successful sales eﬀorts by 12%
-- ► Modeled targets likely to renew, and presented analysis to leadership, which led to a YoY revenue increase of $300K
-- ► Compiled, studied, and inferred large amounts of data, modeling information to drive auto policy pricing
+"""
+Implemented, organized and led multiple Learning Analytics projects for the university's Global Language Center. 
+Developed Python scripts for Google Classroom API calls for automated creation of classes, homework assignments, and announcements. 
+Built and maintained end-to-end student grade management system in Google Sheets for importing student data, 
+automatically ingesting assignment grades, flagging struggling students, calculating class-wide performance statistics 
+and visualizualizating results in summary dashboard. Created a live, interactive, in-class activity tracking system 
+by integrating student smartphones, Google Sheets, and Google Forms. The system provided students instant feedback on 
+their learning and allowed teachers to adjust their lessons and instructional approach in real time. 
+Trained colleagues as well as led product maintenance improvement over a ten-year period.
 """
 )
 
 # --- JOB 3
-st.write('\n')
-st.write("🚧", "**Data Analyst | Chegg**")
-st.write("04/2015 - 01/2018")
+st.markdown("**Grade Team Lead & English Language Arts Teacher**")
+st.markdown("University Neighborhood Middle School")
+st.markdown("New York, New York, USA")
+st.markdown("July 2007 – July 2009")
 st.write(
-    """
-- ► Devised KPIs using SQL across company website in collaboration with cross-functional teams to achieve a 120% jump in organic traﬃc
-- ► Analyzed, documented, and reported user survey results to improve customer communication processes by 18%
-- ► Collaborated with analyst team to oversee end-to-end process surrounding customers' return data
+"""
+Worked on a teacher-lead team to design and implement a real-time student attendance system using Google Sheets. 
+Led seventh grade team in reviewing student academic, behavioral, and attendance data to plan student interventions and curriculum improvements. 
+Received formal Letter of Accommodation from Principal for accomplishments as team
 """
 )
 
