@@ -115,7 +115,8 @@ if st.session_state.real_data is not None and st.session_state.model_selection i
                 st.session_state.real_data, 
                 metrics=['CSTest', 'KSComplement', 'ContinuousKLDivergence', 'DiscreteKLDivergence'], 
                 aggregate=False)
-    st.dataframe(eval_df[["name","raw_score","min_value","max_value", "goal"]].dropna(subset = ['raw_score']))
+    eval_df = eval_df[["name","raw_score","min_value","max_value", "goal"]].dropna(subset = ['raw_score'])
+    st.dataframe(eval_df)
     eval_model = TableEvaluator(st.session_state.real_data, st.session_state.synth_data)
     st.markdown(f"### Visualizations")
     st.selectbox("Select comparision plot", ["Mean and Standard Diviation", "Distribution Plots", "PCA Plots"], key='plot_selection')
