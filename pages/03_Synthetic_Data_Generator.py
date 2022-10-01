@@ -1,8 +1,8 @@
 import streamlit as st
 import requests
 import pandas as pd
-from sdv.tabular import GaussianCopula, CTGAN, TVAE
-from sdv.evaluation import evaluate
+# from sdv.tabular import GaussianCopula, CTGAN, TVAE
+# from sdv.evaluation import evaluate
 from timeit import default_timer as timer
 from table_evaluator import TableEvaluator
 from table_evaluator import viz
@@ -29,18 +29,18 @@ if "gen_time" not in st.session_state:
 if "plot_selection" not in st.session_state:
     st.session_state.plot_selection = None
 
-def synth_gen():
-    if st.session_state.model_selection == "GaussianCopula":
-        st.session_state.model = GaussianCopula()
-    if st.session_state.model_selection == "CTGAN":
-        st.session_state.model = CTGAN()
-    if st.session_state.model_selection == "TVAE":
-        st.session_state.model = TVAE()
-    start = timer()
-    st.session_state.model.fit(st.session_state.real_data)
-    st.session_state.synth_data = st.session_state.model.sample(st.session_state.num_rows)
-    end = timer()
-    st.session_state.gen_time = end - start
+# def synth_gen():
+#     if st.session_state.model_selection == "GaussianCopula":
+#         st.session_state.model = GaussianCopula()
+#     if st.session_state.model_selection == "CTGAN":
+#         st.session_state.model = CTGAN()
+#     if st.session_state.model_selection == "TVAE":
+#         st.session_state.model = TVAE()
+#     start = timer()
+#     st.session_state.model.fit(st.session_state.real_data)
+#     st.session_state.synth_data = st.session_state.model.sample(st.session_state.num_rows)
+#     end = timer()
+#     st.session_state.gen_time = end - start
 
 # def clear_session():
 #     st.session_state.real_data = None
@@ -102,30 +102,30 @@ elif isinstance(st.session_state.real_data, pd.DataFrame) and st.session_state.r
             "Variational autoencoder Deep Learning synthesizer",
             "Generative adversarial network deep learning synthesizer"]}, index=[1,2,3]))
     st.number_input("Number of rows", min_value=1, max_value=10000, value=10000, key='num_rows')
-    st.selectbox("Select one", ["GaussianCopula", "TVAE", "CTGAN"], on_change=synth_gen, key='model_selection')
+    # st.selectbox("Select one", ["GaussianCopula", "TVAE", "CTGAN"], on_change=synth_gen, key='model_selection')
 else:
     st.warning("Pandas could not read the csv file.")
 
-if st.session_state.real_data is not None and st.session_state.model_selection is not None:
-    st.markdown(f"### Synthetic Data generated with {st.session_state.model_selection} model.")
-    st.dataframe(st.session_state.synth_data)
-    st.write(f"{st.session_state.synth_data.shape[0]} records generated in {st.session_state.gen_time:.2f} seconds.")
-    st.markdown(f"### Report")
-    eval_df = evaluate(st.session_state.synth_data, 
-                st.session_state.real_data, 
-                metrics=['CSTest', 'KSComplement', 'ContinuousKLDivergence', 'DiscreteKLDivergence'], 
-                aggregate=False)
-    st.dataframe(eval_df[["name","raw_score","min_value","max_value", "goal"]].dropna(subset = ['raw_score']))
-    eval_model = TableEvaluator(st.session_state.real_data, st.session_state.synth_data)
-    st.markdown(f"### Visualizations")
-    st.selectbox("Select comparision plot", ["Mean and Standard Diviation", "Distribution Plots", "PCA Plots"], key='plot_selection')
+# if st.session_state.real_data is not None and st.session_state.model_selection is not None:
+#     st.markdown(f"### Synthetic Data generated with {st.session_state.model_selection} model.")
+#     st.dataframe(st.session_state.synth_data)
+#     st.write(f"{st.session_state.synth_data.shape[0]} records generated in {st.session_state.gen_time:.2f} seconds.")
+#     st.markdown(f"### Report")
+#     eval_df = evaluate(st.session_state.synth_data, 
+#                 st.session_state.real_data, 
+#                 metrics=['CSTest', 'KSComplement', 'ContinuousKLDivergence', 'DiscreteKLDivergence'], 
+#                 aggregate=False)
+#     st.dataframe(eval_df[["name","raw_score","min_value","max_value", "goal"]].dropna(subset = ['raw_score']))
+#     eval_model = TableEvaluator(st.session_state.real_data, st.session_state.synth_data)
+#     st.markdown(f"### Visualizations")
+#     st.selectbox("Select comparision plot", ["Mean and Standard Diviation", "Distribution Plots", "PCA Plots"], key='plot_selection')
 
-    if st.session_state.plot_selection == "Mean and Standard Diviation":
-        st.pyplot(eval_model.plot_mean_std(rplt=True))
-    elif st.session_state.plot_selection == "Distribution Plots":
-        st.pyplot(eval_model.plot_distributions(rplt=True))
-    elif st.session_state.plot_selection == "PCA Plots":
-        st.pyplot(eval_model.plot_pca(rplt=True))
+#     if st.session_state.plot_selection == "Mean and Standard Diviation":
+#         st.pyplot(eval_model.plot_mean_std(rplt=True))
+#     elif st.session_state.plot_selection == "Distribution Plots":
+#         st.pyplot(eval_model.plot_distributions(rplt=True))
+#     elif st.session_state.plot_selection == "PCA Plots":
+#         st.pyplot(eval_model.plot_pca(rplt=True))
 
-# st.button("Clear Session", on_click=clear_session)        
+# # st.button("Clear Session", on_click=clear_session)        
     
