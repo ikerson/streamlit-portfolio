@@ -1,4 +1,5 @@
 import streamlit as st
+from pathlib import Path
 import requests
 import pandas as pd
 from sdv.tabular import GaussianCopula, CTGAN, TVAE
@@ -9,6 +10,13 @@ from table_evaluator import viz
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 # st.set_option('client.showErrorDetails', False)
+
+current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
+css_file = current_dir / "styles" / "main.css"
+
+# load css
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 if "dataset_url" not in st.session_state:
     st.session_state.dataset_url = None
@@ -115,8 +123,7 @@ if st.session_state.real_data is not None and st.session_state.model_selection i
                 st.session_state.real_data, 
                 metrics=['CSTest', 'KSComplement', 'ContinuousKLDivergence', 'DiscreteKLDivergence'], 
                 aggregate=False)
-    eval_df = eval_df[["name","raw_score","min_value","max_value", "goal"]].dropna(subset = ['raw_score'])
-    st.dataframe(eval_df)
+    st.dataframe(eval_df[["name","raw_score","min_value","max_value", "goal"]].dropna(subset = ['raw_score']))
     eval_model = TableEvaluator(st.session_state.real_data, st.session_state.synth_data)
     st.markdown(f"### Visualizations")
     st.selectbox("Select comparision plot", ["Mean and Standard Diviation", "Distribution Plots", "PCA Plots"], key='plot_selection')
