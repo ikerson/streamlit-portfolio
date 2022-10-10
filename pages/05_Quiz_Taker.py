@@ -50,8 +50,15 @@ apiKey = st.secrets.api_key
 mongo_user = st.secrets.mongo_user
 mongo_password = st.secrets.mongo_password
 
+quiz_id = None
+
 st.markdown("## Quiz Taker")
-quiz_id = st.text_input("Enter the quiz id").strip()
+query_params = st.experimental_get_query_params()
+if "quiz" in query_params:
+    quiz_id = query_params["quiz"][0]
+else: 
+    quiz_id = st.text_input("Enter the quiz id").strip()
+
 if quiz_id and ObjectId.is_valid(quiz_id):
     client = init_mongo(mongo_user, mongo_password)
     coll = client.portfolio_project.quizzes
@@ -60,9 +67,10 @@ if quiz_id and ObjectId.is_valid(quiz_id):
     if quiz_info:
         results = quiz_info['quiz']
         title = quiz_info['title']
+        if title == None: title = "Quiz" # if no title, use "Quiz"
         word_bank = list(results.keys())
         random.shuffle(word_bank)
-        st.markdown(f"## {title}")
+        st.markdown("## " + title)
         st.markdown("### Word Bank")
         html_table = tabulate(chunker(word_bank, 5), tablefmt='html')
         st.markdown(html_table, unsafe_allow_html=True)

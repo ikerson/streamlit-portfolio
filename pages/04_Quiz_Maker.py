@@ -4,7 +4,6 @@
 
 import streamlit as st
 from pathlib import Path
-import os
 import csv
 from fpdf import FPDF
 import requests
@@ -208,6 +207,9 @@ def chunker(seq, size):
 # Start App                                                                #
 ############################################################################
 
+app_url = st.secrets.app_url
+target_page = st.secrets.target_page
+
 apiUrl = 'http://api.wordnik.com/v4'
 apiKey = st.secrets.api_key
 
@@ -285,12 +287,11 @@ if st.session_state.results_final:
     quiz_title = st.session_state.quiz_title
     client = init_mongo(mongo_user, mongo_password)
     coll = client.portfolio_project.quizzes
-    quiz_id = insert_quiz(quiz_title, results, coll)
+    quiz_id = insert_quiz(str(quiz_title), results, coll)
     close_mongo(client)
-    domain = os.environ.get('SERVER_NAME')
-    current_path = os.environ.get('PATH_INFO')
-    url = f"/{Path(__file__).stem}/?quiz={quiz_id}"
-    st.write(f"/{domain}{current_path}/?quiz={quiz_id}")
+    st.markdown("### Quiz Created")
+    st.write("View your quiz at:")
+    st.write(f"{app_url}{target_page}/?quiz={quiz_id}")
 
     # word_bank = list(results.keys())
     # random.shuffle(word_bank)
