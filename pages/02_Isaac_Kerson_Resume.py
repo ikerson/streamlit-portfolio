@@ -9,6 +9,10 @@ css_file = current_dir / "styles" / "main.css"
 resume_file = current_dir / "assets" / "cv.pdf"
 profile_pic = current_dir / "assets" / "profile-pic.jpg"
 
+app_url = st.secrets.app_url
+sdg_path = app_url + 'Synthetic_Data_Generator'
+quiz_path = app_url + 'Quiz_Maker'
+
 # page settings
 PAGE_TITLE = "Isaac Kerson | Resume"
 PAGE_ICON = ":page_facing_up:"
@@ -28,9 +32,8 @@ SOCIAL_MEDIA = {
     "Twitter": "https://twitter.com/Isaac_Kerson",
 }
 PROJECTS = [
-    ("Consumer Electronics Classification", "https://github.com/ikerson", "Distributed random forest classification model for consumer electronics master data"),
-    ("IT Ticketing Time Prediction", "https://github.com/ikerson", "Deep learning model to predict service ticket completion time using system logs"),
-    ("Auto Shop Database", "https://github.com/ikerson", "Content Management System using PostgreSQL database and Flask"),
+    ("Synthetic Data Generator", sdg_path, "Upload real datasets, select deep learning or statistical data generation models, and create synthetic data. Judge the caliber of the fake records with visualizations and quality metrics and download the new synthetic data. Built with Python, Streamlit, Synthetic Data Vault library, and Matplotlib."),
+    ("Quiz Maker", quiz_path, "Input target words and select sample sentences provided via API calls. Select and edit the sentences and share the link for the finalized quiz. Built with Python, Streamlit, API Requests library, and MongoDB."),
 ]
 
 # st.set_page_config(page_title=None, page_icon=None, layout="centered", initial_sidebar_state="auto", menu_items=None)

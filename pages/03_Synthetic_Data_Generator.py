@@ -57,12 +57,7 @@ def synth_gen():
 
 st.markdown("# Synthetic Data Generator")
 st.sidebar.markdown("# Synthetic Data Generator")
-
-st.markdown("## Introduction")
-st.markdown("This is a simple app to generate synthetic data for a given dataset. The app uses the [SDV](https://sdv.dev/) library to generate synthetic data.")
-
-st.markdown("## Usage")
-st.markdown("To use the app, simply upload a dataset in CSV format. The app will automatically detect the delimiter and the column names. The app will then generate synthetic data for the dataset. The app will also generate a report of the synthetic data.")
+st.sidebar.markdown("Generate synthetic data by uploading a dataset or providing a URL to a dataset. Select a model and number of rows to generate. The app will generate the synthetic data, display the results, and provide quality metrics.")
 
 st.session_state.dataset_url = st.text_input("Enter the URL of the dataset.")
 
