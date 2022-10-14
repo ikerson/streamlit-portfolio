@@ -231,7 +231,6 @@ if "results_final" not in st.session_state:
 if "quiz_title" not in st.session_state:
     st.session_state.quiz_title = None
 
-
 st.markdown("# Sentence Maker")
 st.sidebar.markdown("# Sentence Maker")
 st.markdown("## Introduction")
@@ -290,7 +289,7 @@ if st.session_state.results_final:
     quiz_id = insert_quiz(str(quiz_title), results, coll)
     close_mongo(client)
     st.markdown("### Quiz Created")
-    st.write("View your quiz at:")
+    st.markdown("View your quiz at:")
     st.write(f"{app_url}{target_page}/?quiz={quiz_id}")
 
     # word_bank = list(results.keys())
