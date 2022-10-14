@@ -7,6 +7,8 @@ import random
 from tabulate import tabulate
 from datetime import datetime
 
+st.set_page_config(page_icon="🧾")
+
 ############################################################################
 # MongoDB, https://www.mongodb.com/
 ############################################################################

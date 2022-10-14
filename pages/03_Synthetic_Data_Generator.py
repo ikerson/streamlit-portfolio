@@ -8,8 +8,8 @@ from timeit import default_timer as timer
 from table_evaluator import TableEvaluator
 from table_evaluator import viz
 
+st.set_page_config(page_icon="📈")
 st.set_option('deprecation.showPyplotGlobalUse', False)
-# st.set_option('client.showErrorDetails', False)
 
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
