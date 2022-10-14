@@ -59,7 +59,7 @@ st.markdown("# Synthetic Data Generator")
 st.sidebar.markdown("# Synthetic Data Generator")
 
 st.markdown("## Introduction")
-st.markdown("This is a simple app to generate synthetic data for a given dataset. The app uses the [SDGym](https://sdv.dev/SDGym/) library to generate synthetic data. The app is built using [Streamlit](https://streamlit.io/).")
+st.markdown("This is a simple app to generate synthetic data for a given dataset. The app uses the [SDV](https://sdv.dev/) library to generate synthetic data.")
 
 st.markdown("## Usage")
 st.markdown("To use the app, simply upload a dataset in CSV format. The app will automatically detect the delimiter and the column names. The app will then generate synthetic data for the dataset. The app will also generate a report of the synthetic data.")

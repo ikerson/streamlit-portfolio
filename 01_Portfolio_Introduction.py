@@ -4,24 +4,43 @@ from pathlib import Path
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "pages" / "styles" / "main.css"
 
+app_url = st.secrets.app_url
+resume_path = app_url + 'Isaac_Kerson_Resume'
+sdg_path = app_url + 'Synthetic_Data_Generator'
+quiz_path = app_url + 'Quiz_Maker'
+
 # load css
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
-st.markdown("# Portfolio Introduction")
-st.markdown('''
-Hello, I am Isaac Kerson. I am a Data Analyst candidate skilled in advanced data analytics, ETL pipelines, and building machine learning models for decision making systems. I am proficient in Python, SQL, Scikit-learn, and Keras. I have experience researching and developing ML prototypes at an industry-leading master data company, implementing analytics engineering projects at a large university, and leading teams. I am currently working as a Lead Data Analytics Engineer at Stibo Systems. I will receive a Master of Science in Analytics from Georgia Institute of Technology in December, 2022.
+# st.markdown("# Portfolio Introduction")
+st.markdown(f''' 
 
-This is my portfolio site. It contains my sample projects and resume. The first project is a synthetic data generator. Users can upload real datasets, select a data generation algorithm, create synthetic data, and review the caliber of the fake records with visualizations and quality metrics. Synthetic tabular data has important applications for training machine learning models when data collection is hindered by privacy or proprietary concerns or is unavailable or too expensive to collect. 
+## Introduction
+Hello, I am Isaac Kerson. I am a Data Analyst candidate skilled in advanced data analytics, 
+ETL pipelines, and building machine learning models for decision making systems. 
 
-The second project is a vocabulary test maker. Users can input target words and sample sentences are retrieved via API calls and NoSQL database queries. Users can select and edit the sample sentences and share the finished tests via html links. The tests are automatically graded and test-takers receive instant feedback on their performance. MongoDB and Python are used on the backend for all create, read, update and delete (CRUD) operations. This type of automated teaching tool has the potential to streamline the clerical work involved in teaching and give instructors more time to focus on student international and engagement.
+## Experience
+I have experience researching and developing ML prototypes at an industry-leading master data company, 
+implementing analytics engineering projects at a large university, and leading teams. 
+I am proficient in Python, SQL, Scikit-learn, and Keras.
+I am currently working as a Lead Data Analytics Engineer at Stibo Systems. 
+I will receive a Master of Science in Analytics from Georgia Institute of Technology in December, 2022.
+Learn more by reading my [resume]({resume_path}).
 
-Thank you for visiting the site. You can contact me on [LinkedIn](https://www.linkedin.com/in/isaackerson/).
+## Projects
 
-Best regards, 
+### [Synthetic Data Generator]({sdg_path})
+Upload real datasets, select deep learning or statistical data generation models, 
+and create synthetic data. Judge the caliber of the fake records with visualizations 
+and quality metrics and download the new synthetic data. Build with Python, Streamlit, 
+Synthetic Data Vault library, and Matplotlib. 
 
-Isaac
-
+### [Quiz Maker]({quiz_path})
+Input target words and select sample sentences provided via API calls. 
+Select and edit the selected sentences and share the link for the finalized quiz. 
+Built with Python, Streamlit, API Requests library, and MongoDB.
 ''')
+
 st.sidebar.markdown("# Welcome")
-st.sidebar.markdown("This site contains my sample projects and resume.")
+st.sidebar.markdown("Learn about my projects and experience here.")

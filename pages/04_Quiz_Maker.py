@@ -231,10 +231,9 @@ if "results_final" not in st.session_state:
 if "quiz_title" not in st.session_state:
     st.session_state.quiz_title = None
 
-st.markdown("# Sentence Maker")
-st.sidebar.markdown("# Sentence Maker")
-st.markdown("## Introduction")
-st.markdown("Introduction goes here.")
+st.markdown("# Quiz Maker")
+st.sidebar.markdown("# Quiz Maker")
+st.sidebar.markdown("Input target words and select sample sentences. Edit the sentences and share the link for the finalized quiz.")
 
 if not st.session_state.intro_stop:
     make_sentences, words = get_words()

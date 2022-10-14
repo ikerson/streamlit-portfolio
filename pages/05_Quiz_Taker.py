@@ -52,7 +52,9 @@ mongo_password = st.secrets.mongo_password
 
 quiz_id = None
 
-st.markdown("## Quiz Taker")
+st.markdown("# Quiz Taker")
+st.sidebar.markdown("# Quiz Taker")
+st.sidebar.markdown("Enter a quiz ID to take a quiz.")
 query_params = st.experimental_get_query_params()
 if "quiz" in query_params:
     quiz_id = query_params["quiz"][0]
