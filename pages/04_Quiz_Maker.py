@@ -16,7 +16,7 @@ import pytz
 # App Page Setup
 #############################################################################
 
-st.set_page_config(page_icon="📝")
+st.set_page_config(page_icon="📝", page_title="Quiz Maker")
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
 csv_file = current_dir / "assets" / "word-meaning-examples.csv"

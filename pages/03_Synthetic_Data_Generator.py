@@ -8,7 +8,7 @@ from timeit import default_timer as timer
 from table_evaluator import TableEvaluator
 from table_evaluator import viz
 
-st.set_page_config(page_icon="📈")
+st.set_page_config(page_icon="📈", page_title="Synthetic Data Generator")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()

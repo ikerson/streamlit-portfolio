@@ -14,7 +14,7 @@ sdg_path = app_url + 'Synthetic_Data_Generator'
 quiz_path = app_url + 'Quiz_Maker'
 
 # page settings
-PAGE_TITLE = "Isaac Kerson | Resume"
+PAGE_TITLE = "Resume"
 PAGE_ICON = ":page_facing_up:"
 PAGE_LAYOUT = "centered"
 NAME = "Isaac Kerson"
