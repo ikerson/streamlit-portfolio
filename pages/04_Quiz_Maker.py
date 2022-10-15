@@ -25,7 +25,7 @@ csv_file = current_dir / "assets" / "word-meaning-examples.csv"
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
-video_title = "synthetic_data_generator_walkthrough.webm"
+video_title = "quiz_maker_walkthrough.webm"
 video_path = current_dir / "assets" / video_title
 video_file = open(video_path, 'rb')
 video_bytes = video_file.read()
