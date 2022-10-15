@@ -35,8 +35,6 @@ PROJECTS = [
     ("Synthetic Data Generator", sdg_path, "Upload real datasets, select deep learning or statistical data generation models, and create synthetic data. Judge the caliber of the fake records with visualizations and quality metrics and download the new synthetic data. Built with Python, Streamlit, Synthetic Data Vault library, and Matplotlib."),
     ("Quiz Maker", quiz_path, "Input target words and select sample sentences provided via API calls. Select and edit the sentences and share the link for the finalized quiz. Built with Python, Streamlit, API Requests library, and MongoDB."),
 ]
-
-# st.set_page_config(page_title=None, page_icon=None, layout="centered", initial_sidebar_state="auto", menu_items=None)
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout=PAGE_LAYOUT)
 
 # --- SOCIAL MEDIA LINKS ---

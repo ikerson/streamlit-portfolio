@@ -15,7 +15,6 @@ quiz_path = app_url + 'Quiz_Maker'
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
-# st.markdown("# Portfolio Introduction")
 st.markdown(f''' 
 
 ## Introduction

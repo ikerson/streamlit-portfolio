@@ -6,8 +6,11 @@ import requests
 import random
 from tabulate import tabulate
 from datetime import datetime
+from pathlib import Path
 
 st.set_page_config(page_icon="🧾")
+current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
+css_file = current_dir / "styles" / "main.css"
 
 ############################################################################
 # MongoDB, https://www.mongodb.com/
