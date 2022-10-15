@@ -13,6 +13,10 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
+video_title = "synthetic_data_generator_walkthrough.webm"
+video_path = current_dir / "assets" / video_title
+video_file = open(video_path, 'rb')
+video_bytes = video_file.read()
 
 # load css
 with open(css_file) as f:
@@ -58,6 +62,7 @@ def synth_gen():
 st.markdown("# Synthetic Data Generator")
 st.sidebar.markdown("# Synthetic Data Generator")
 st.sidebar.markdown("Generate synthetic data by uploading a dataset or providing a URL to a dataset. Select a model and number of rows to generate. The app will generate the synthetic data, display the results, and provide quality metrics.")
+st.sidebar.video(video_bytes)
 
 st.session_state.dataset_url = st.text_input("Enter the URL of the dataset.")
 
