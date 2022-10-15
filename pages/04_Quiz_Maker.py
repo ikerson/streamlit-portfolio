@@ -25,6 +25,11 @@ csv_file = current_dir / "assets" / "word-meaning-examples.csv"
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
+video_title = "synthetic_data_generator_walkthrough.webm"
+video_path = current_dir / "assets" / video_title
+video_file = open(video_path, 'rb')
+video_bytes = video_file.read()
+
 ############################################################################
 # MongoDB, https://www.mongodb.com/
 ############################################################################
@@ -235,6 +240,7 @@ if "quiz_title" not in st.session_state:
 st.markdown("# Quiz Maker")
 st.sidebar.markdown("# Quiz Maker")
 st.sidebar.markdown("Input target words and select sample sentences. Edit the sentences and share the link for the finalized quiz.")
+st.sidebar.video(video_bytes)
 
 if not st.session_state.intro_stop:
     make_sentences, words = get_words()
