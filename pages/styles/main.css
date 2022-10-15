@@ -22,6 +22,6 @@ hr {
     margin-bottom: 5%;
 }
 
-#MainMenu {visibility: visible;}
+#MainMenu {visibility: hidden;} /* Hide the menu until the page is loaded; Set to visible to show menu. */
 footer {visibility: hidden;}
 header {visibility: hidden;}
